@@ -5,25 +5,25 @@ function GetInLine() {
     let bakiyeler = txtBakiyes.split(',');
     
     var cikanlar = [];
-    var kuyruktakiler = [];
+    var siradakiler = [];
     
     for (let i = 0; i < bakiyeler.length; i++) {
-    kuyruktakiler.push([i, i + 1, bakiyeler[i]])
+    siradakiler.push([i, i + 1, bakiyeler[i]])
     }
     
-    cikanlar = islem(limit, kuyruktakiler, cikanlar, kuyruktakiler.length);
+    cikanlar = islem(limit, siradakiler, cikanlar, siradakiler.length);
     
     let spanSonuc = document.getElementById("spanSonuc");
     spanSonuc.innerText = cikanlar
     }
     
-    function islem(limit, kuyruktakiler, cikanlar, toplamKisiSayisi) {
+    function islem(limit, siradakiler, cikanlar, toplamKisiSayisi) {
     
     let siradakiler = [];
     
-    for (let i = 0; i < kuyruktakiler.length; i++) {
+    for (let i = 0; i < siradakiler.length; i++) {
     
-    let siradakiKisi = kuyruktakiler[i];
+    let siradakiKisi = siradakiler[i];
     let siraNumarasi = siradakiKisi[1]
     let bakiyesi = siradakiKisi[2]
     bakiyesi -= limit;
